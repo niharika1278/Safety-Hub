@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Safety Hub</title>
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">Safety Hub</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#report">Report</a></li>
+      <li><a href="#helplines">Helplines</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="left">
+        <h1>Stay safe. Take action.</h1>
+        <p>One button can alert authorities and save time. Quick access to helplines and community reports.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Safety Score</h3>
+            <p id="safety-score">Calculating...</p>
+          </div>
+          <div class="card">
+            <h3>Nearby Reports</h3>
+            <p id="nearby-reports">0 reports</p>
+          </div>
+          <div class="card">
+            <h3>Trusted Contacts</h3>
+            <p>Not set</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="sos-area">
+          <button id="sosBtn" class="sos-button">SOS</button>
+          <p class="sos-hint">Press and hold for emergency</p>
+
+          <div class="quick-helplines" id="helplines-quick">
+            <!-- helplines inserted here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips" class="tips-section">
+      <h2>Latest safety tips</h2>
+      <div id="tipsContainer" class="tips-grid">
+        <!-- tips cards loaded here -->
+      </div>
+    </section>
+
+    <section id="report" class="report-section">
+      <h2>Report unsafe area</h2>
+      <form id="reportForm">
+        <label>Place name or address <input name="place" required /></label>
+        <label>Description <textarea name="description" required></textarea></label>
+        <div class="coords">
+          <label>Latitude <input name="lat" /></label>
+          <label>Longitude <input name="lng" /></label>
+        </div>
+        <button type="submit" class="btn">Submit report</button>
+        <div id="reportStatus" class="muted"></div>
+      </form>
+    </section>
+
+    <section id="helplines" class="helplines-section">
+      <h2>Helplines</h2>
+      <div id="helplinesList" class="helplines-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Copyright &copy; 2025. All rights reserved.</small>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
